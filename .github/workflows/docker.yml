@@ -9,6 +9,6 @@ jobs:
     container: alpine:latest
     steps:
       - name: hello
-        run:
-          - uname -a
-          - . /etc/os-release && printf 'Hello from %s\n' "$NAME"
+        run: >
+          uname -a; \
+          . /etc/os-release && printf 'Hello from %s\n' "$NAME"
