@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     container: alpine:latest
     steps:
+      - name: env
+        run: uname -a; nproc
       - name: hello
-        run: >
-          uname -a; \
-          . /etc/os-release && printf 'Hello from %s\n' "$NAME"
+        run: . /etc/os-release && printf 'Hello from %s\n' "$NAME"
