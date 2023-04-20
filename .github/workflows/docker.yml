@@ -15,5 +15,4 @@ jobs:
       - name: bye
         run: |
           printf 'Bye 1\n'
-          false
           printf 'Bye 2\n'
