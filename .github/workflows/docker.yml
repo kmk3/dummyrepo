@@ -9,9 +9,10 @@ jobs:
     container: alpine:latest
     steps:
       - name: env
-        run: uname -a
-        run: nproc
-        run: cat /etc/os-release
+        run: |
+          uname -a
+          nproc
+          cat /etc/os-release
       - name: hello
         run: . /etc/os-release && printf 'Hello from %s\n' "$NAME"
       - name: bye
