@@ -14,7 +14,7 @@ jobs:
           nproc
           cat /etc/os-release
       - name: hello
-        run: . /etc/os-release && printf 'Hello from %s\n' "$NAME"
+        run: . /etc/os-release && printf 'Hello from %s\n' "$PRETTY_NAME"
       - name: bye
         run: |
           printf 'Bye 1\n'
