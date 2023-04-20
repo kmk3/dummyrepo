@@ -12,4 +12,7 @@ jobs:
         run: uname -a; nproc
       - name: hello
         run: . /etc/os-release && printf 'Hello from %s\n' "$NAME"
-      - run: printf 'Bye\n'
+      - run: |
+        printf 'Bye 1\n'
+        false
+        printf 'Bye 2\n'
