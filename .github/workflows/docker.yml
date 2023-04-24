@@ -19,3 +19,8 @@ jobs:
         run: |
           printf 'Bye 1\n'
           printf 'Bye 2\n'
+      - name: end
+        run: >
+          printf '%s\n' a
+          b
+
