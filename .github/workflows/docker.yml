@@ -1,7 +1,11 @@
 name: docker
+
 on:
   push:
     branches: [ master ]
+
+permissions:
+  contents: read
 
 jobs:
   alpine-hello:
