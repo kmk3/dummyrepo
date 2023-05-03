@@ -15,11 +15,6 @@ jobs:
     runs-on: ubuntu-latest
     container: alpine:latest
     steps:
-      - name: env
-        run: |
-          nproc
-          uname -a
-          cat /etc/os-release
       - uses: actions/checkout@v3
       - uses: ./.github/actions/pre
       - name: hello
@@ -32,4 +27,3 @@ jobs:
         run: >
           printf '%s\n' a
           b
-      - run: env | LC_ALL=C sort

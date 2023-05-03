@@ -3,5 +3,11 @@ name: pre
 runs:
   using: composite
   steps:
-    - run: printf 'Hello from pre\n'
+    - name: env
+      run: |
+        nproc
+        uname -a
+        cat /etc/os-release
+      shell: sh
+    - run: env | LC_ALL=C sort
       shell: sh
