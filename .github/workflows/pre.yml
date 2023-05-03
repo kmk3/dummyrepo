@@ -1,0 +1,6 @@
+name: pre
+
+runs:
+  using: composite
+  steps:
+    - run: printf 'Hello from pre\n'
