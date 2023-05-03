@@ -7,12 +7,13 @@ on:
 permissions:
   contents: read
 
+env:
+  TERM: dumb
+
 jobs:
   alpine-hello:
     runs-on: ubuntu-latest
     container: alpine:latest
-    env:
-      TERM: dumb
     steps:
       - name: env
         run: |
