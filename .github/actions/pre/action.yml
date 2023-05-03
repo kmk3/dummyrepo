@@ -4,4 +4,4 @@ runs:
   using: composite
   steps:
     - run: printf 'Hello from pre\n'
-      shell: bash
+      shell: sh
