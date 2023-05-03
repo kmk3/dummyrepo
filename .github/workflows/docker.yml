@@ -16,8 +16,8 @@ jobs:
     steps:
       - name: env
         run: |
-          uname -a
           nproc
+          uname -a
           cat /etc/os-release
       - name: hello
         run: . /etc/os-release && printf 'Hello from %s\n' "$PRETTY_NAME"
