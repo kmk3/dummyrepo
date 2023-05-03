@@ -21,7 +21,7 @@ jobs:
           uname -a
           cat /etc/os-release
       - uses: actions/checkout@v3
-      - uses: ./pre.yml
+      - uses: ./.github/actions/pre
       - name: hello
         run: . /etc/os-release && printf 'Hello from %s\n' "$PRETTY_NAME"
       - name: bye
