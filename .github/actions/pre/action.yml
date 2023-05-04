@@ -1,9 +1,5 @@
 name: pre
 
-defaults:
-  run:
-    shell: sh
-
 runs:
   using: composite
   steps:
@@ -12,4 +8,6 @@ runs:
         nproc
         uname -a
         cat /etc/os-release
+      shell: sh
     - run: env | LC_ALL=C sort
+      shell: sh
