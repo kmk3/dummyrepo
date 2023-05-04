@@ -7,7 +7,9 @@ runs:
       run: |
         nproc
         uname -a
+        id
         cat /etc/os-release
+        getent passwd
       shell: sh
     - run: env | LC_ALL=C sort
       shell: sh
